@@ -1,0 +1,37 @@
+﻿<Window x:Class="SupportTechEstibenMontoyaM1.views.Seguimientos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SupportTechEstibenMontoyaM1.views"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Seguimientos" Height="600" Width="900" Icon="/img/Icon.jpg" Foreground="#FF020202">
+    <Grid>
+        <TextBox Name="txtSeguimiento" HorizontalAlignment="Left" Margin="230,156,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="193" Height="39"/>
+        <Label Content="Código Ticket" HorizontalAlignment="Left" Margin="119,99,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+        <Label Content="Tecnico" HorizontalAlignment="Left" Margin="508,101,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+        <ComboBox Name="cmbTicket" HorizontalAlignment="Left" Margin="230,96,0,0" VerticalAlignment="Top" Width="193" Height="35"/>
+        <ComboBox Name="cmbTecnico" HorizontalAlignment="Left" Margin="578,98,0,0" VerticalAlignment="Top" Width="192" Height="35"/>
+        <Label Content="Estado" HorizontalAlignment="Left" Margin="513,164,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+        <Label Content="Seguimiento" HorizontalAlignment="Left" Margin="126,158,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+        <Label Content="Agregar Seguimiento" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="28"/>
+        <Button Name="btnAgregar" Content="Agregar" HorizontalAlignment="Left" Margin="273,225,0,0" VerticalAlignment="Top" Width="86" Height="32" Background="#FF3327C8" Foreground="White" FontWeight="Bold" Click="btnAgregar_Click" BorderBrush="#FF020202"/>
+        <Button Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="559,225,0,0" VerticalAlignment="Top" Width="86" Height="32" Background="#FF020202" Foreground="White" FontWeight="Bold" BorderBrush="#FF020202" Click="btnLimpiar_Click"/>
+        <Button Name="btnEditar" Content="Editar" HorizontalAlignment="Left" Margin="369,225,0,0" VerticalAlignment="Top" Width="86" Height="32" Background="#FF5BB3CA" Foreground="White" FontWeight="Bold" BorderBrush="#FF020202" Click="btnEditar_Click"/>
+        <Button Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="464,225,0,0" VerticalAlignment="Top" Width="86" Height="32" RenderTransformOrigin="0.402,0.487" Background="#FFBD0F0F" Foreground="White" FontWeight="Bold" BorderBrush="#FF020202" Click="btnEliminar_Click"/>
+        <DataGrid Name="dtgSeguimientos" IsReadOnly="True" Margin="90,286,89,31" RenderTransformOrigin="0.5,0.5" Background="White" BorderBrush="#FF3327C8" Foreground="#FF020202" SelectionChanged="dtgSeguimientos_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="50"/>
+                <DataGridTextColumn Header="Código Ticket" Binding="{Binding idTicket}" Width="100"/>
+                <DataGridTextColumn Header="Asunto" Binding="{Binding asunto}" Width="100"/>
+                <DataGridTextColumn Header="Id Técnico" Binding="{Binding idPersonal}" Width="150"/>
+                <DataGridTextColumn Header="Técnico" Binding="{Binding tecnico}" Width="150"/>
+                <DataGridTextColumn Header="Seguimeinto" Binding="{Binding seguimiento}" Width="170"/>
+                <DataGridTextColumn Header="Especialidad" Binding="{Binding especialidad}" Width="150"/>
+                <DataGridTextColumn Header="Estado" Binding="{Binding estado}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <ComboBox Name="cmbEstado" HorizontalAlignment="Left" Margin="577,162,0,0" VerticalAlignment="Top" Width="192" Height="35"/>
+    </Grid>
+</Window>
