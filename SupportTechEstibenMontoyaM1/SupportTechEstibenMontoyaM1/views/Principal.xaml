@@ -1,0 +1,35 @@
+﻿<Window x:Class="SupportTechEstibenMontoyaM1.views.Principal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SupportTechEstibenMontoyaM1.views"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="SingleBorderWindow"
+        ResizeMode="CanMinimize"
+        WindowState="Maximized"
+        Title="Principal" Height="450" Width="800" Icon="/img/Icon.jpg" Foreground="#FF020202" Background="White">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Administrador">
+                <MenuItem Header="Admin Usuarios" Click="MenuUsuario_Click"/>
+                <MenuItem Header="Cambia Cuanta" Click="MenuCambiar_Click"/>
+                <MenuItem Header="Salir" Click="MenuSalir_Click"/>
+            </MenuItem>
+            <MenuItem Header="Empleados">
+                <MenuItem Header="Personal" Click="MenuPersonal_Click"/>
+            </MenuItem>
+            <MenuItem Header="Tickets">
+                <MenuItem Header="Admin Tickets" Click="MenuTicket_Click"/>
+            </MenuItem>
+            <MenuItem Header="Seguimientos">
+                <MenuItem Header="Agregar Seguimientos" Click="MenuSeguimiento_Click"/>
+            </MenuItem>
+        </Menu>
+        <Grid>
+            <Image Stretch="Fill" Source="/img/Fondo.jpg"/>
+        </Grid>
+    </DockPanel>
+
+</Window>

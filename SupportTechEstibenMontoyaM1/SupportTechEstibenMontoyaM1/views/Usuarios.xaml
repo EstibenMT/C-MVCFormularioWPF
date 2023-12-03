@@ -1,0 +1,40 @@
+﻿<Window x:Class="SupportTechEstibenMontoyaM1.views.Usuarios"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SupportTechEstibenMontoyaM1.views"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Usuarios" Height="500" Width="800" Icon="/img/Icon.jpg" Foreground="#FF020202">
+    <Grid>
+        <Label Content="Nuevo Usuario" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="28"/>
+        <Label Content="Usuario" HorizontalAlignment="Left" Margin="36,89,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+        <Label Content="Contraseña" HorizontalAlignment="Left" Margin="273,89,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.798,0.515" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Confirmar Contraseña" HorizontalAlignment="Left" Margin="498,89,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Empleado" HorizontalAlignment="Left" Margin="21,127,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Nivel" HorizontalAlignment="Left" Margin="313,131,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Estado" HorizontalAlignment="Left" Margin="599,131,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <TextBox Name="txtUsuario" HorizontalAlignment="Left" Margin="101,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="159" Height="22"/>
+        <PasswordBox Name="txtClave" HorizontalAlignment="Left" Margin="362,92,0,0" VerticalAlignment="Top" Width="134" Height="22"/>
+        <PasswordBox Name="txtConfirmar" Margin="658,92,18,0" VerticalAlignment="Top" Height="22"/>
+        <CheckBox Name="chkEstado" Content="Activo" HorizontalAlignment="Left" Margin="658,137,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="cmbEmpleado" HorizontalAlignment="Left" Margin="101,131,0,0" VerticalAlignment="Top" Width="159"/>
+        <ComboBox Name="cmbNivel" HorizontalAlignment="Left" Margin="362,135,0,0" VerticalAlignment="Top" Width="134"/>
+        <Button Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="180,180,0,0" VerticalAlignment="Top" Width="86" Height="32" Background="#FF3327C8" Foreground="White" Click="btnGuardar_Click" BorderBrush="#FF020202"/>
+        <Button Name="btnEditar" Content="Editar" HorizontalAlignment="Left" Margin="279,180,0,0" VerticalAlignment="Top" Width="86" Height="32" Background="#FF5BB3CA" Foreground="White" BorderBrush="#FF020202" Click="btnEditar_Click"/>
+        <Button Name="btnCambiarEstado" Content="Cambiar Estado" HorizontalAlignment="Left" Margin="384,180,0,0" VerticalAlignment="Top" Width="90" Height="32" Background="#FFB11010" Foreground="#FFF9EEEE" Click="btnCambiarEstado_Click" BorderBrush="#FF020202"/>
+        <Button Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="489,180,0,0" VerticalAlignment="Top" Width="86" Height="32" Background="#FF020202" Foreground="#FFF9EEEE" BorderBrush="#FF020202" Click="btnLimpiar_Click"/>
+        <DataGrid Name="dtgUsuarios" IsReadOnly="True" Margin="74,226,46,14">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="50"/>
+                <DataGridTextColumn Header="Usuario" Binding="{Binding login}"  Width="120"/>
+                <DataGridTextColumn Header="Contraseña" Binding="{Binding pass}"  Width="120"/>
+                <DataGridTextColumn Header="Nivel" Binding="{Binding nivel}"  Width="100"/>
+                <DataGridTextColumn Header="Empleado" Binding="{Binding empleado}"  Width="100"/>
+                <DataGridTextColumn Header="IdEmpleado" Binding="{Binding idPersonal}" Width="100"  />
+                <DataGridTextColumn Header="Estado" Binding="{Binding estado}"  Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
